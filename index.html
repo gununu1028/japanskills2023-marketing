@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デリシャスプレミアム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        /*タブ切り替え全体のスタイル*/
+        .tabs {
+            margin-top: 50px;
+            padding-bottom: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        /*タブのスタイル*/
+        .tab_item {
+            width: calc(100%/3);
+            height: 50px;
+            border-bottom: 3px solid darkorange;
+            background-color: #d9d9d9;
+            line-height: 50px;
+            font-size: 16px;
+            text-align: center;
+            color: #565656;
+            display: block;
+            float: left;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .tab_item:hover {
+            opacity: 0.75;
+        }
+
+        /*ラジオボタンを全て消す*/
+        input[name="tab_item"] {
+            display: none;
+        }
+
+        /*タブ切り替えの中身のスタイル*/
+        .tab_content {
+            display: none;
+            padding: 40px 40px 0;
+            clear: both;
+            overflow: hidden;
+        }
+
+
+        /*選択されているタブのコンテンツのみを表示*/
+        #all:checked~#all_content,
+        #programming:checked~#programming_content,
+        #design:checked~#design_content {
+            display: block;
+        }
+
+        /*選択されているタブのスタイルを変える*/
+        .tabs input:checked+.tab_item {
+            background-color: darkorange;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-dodger-blue-500 text-white">
+    <div style="border-bottom: 2px solid white;">
+        <div class="max-w-screen-lg mx-auto pt-12">
+            <div class="flex flex-wrap pt-12">
+                <div class="w-4/6 pt-20">
+                    <h1 class="text-5xl font-extrabold" style="letter-spacing: 1px;">デリシャスプレミアムアプリ</h1>
+                    <p class="tracking-normal">デリシャスプレミアムの宅配注文</p>
+                    <div class="flex pt-20 space-x-4">
+                        <a href="#" class="block bg-black w-40 flex items-center justify-center">App Storeでダウンロード</a>
+                        <a href="#" class="block bg-black w-40 flex items-center justify-center">Google Playでダウンロード</a>
+                    </div>
+                </div>
+                <div class="w-2/6 flex-none" style="height: 400px; overflow: hidden;">
+                    <img src="img/iphone.png" alt="デリシャスプレミアムアプリの画像" class="w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="padding-top: 40px; padding-bottom: 40px; border-bottom: 2px solid white;">
+        <div class="text-center" style="padding-bottom: 4px;">
+            <h2 style="font-size: 20px; font-weight: 900;">デリシャスプレミアムの宅配注文</h2>
+        </div>
+        <div class="tabs">
+            <input id="all" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="all">最短24時間でお届け</label>
+            <input id="programming" type="radio" name="tab_item">
+            <label class="tab_item" for="programming">毎日特売品をお知らせ</label>
+            <input id="design" type="radio" name="tab_item">
+            <label class="tab_item" for="design">ポイント還元</label>
+            <div class="tab_content" id="all_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" style="color: black;">最短24時間でお届けします。</p>
+                </div>
+            </div>
+            <div class="tab_content" id="programming_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" style="color: black;">プッシュ通知で毎日特売品をお知らせします。</p>
+                </div>
+            </div>
+            <div class="tab_content" id="design_content">
+                <div class="tab_content_description">
+                    <p class="c-txtsp" style="color: black;">100円につき2円をポイント付与します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>
