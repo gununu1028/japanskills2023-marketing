@@ -4,98 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>デリシャスプレミアム</title>
+    <title>デリシャスプレミアムアプリ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: dodgerblue;
-            color: white;
-        }
-
-        /*タブ切り替え全体のスタイル*/
-        .tabs {
-            margin-top: 50px;
-            padding-bottom: 40px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 700px;
-            margin: 0 auto;
-        }
-
-        /*タブのスタイル*/
-        .tab_item {
-            width: calc(100%/3);
-            height: 50px;
-            border-bottom: 3px solid darkorange;
-            background-color: #d9d9d9;
-            line-height: 50px;
-            font-size: 16px;
-            text-align: center;
-            color: #565656;
-            display: block;
-            float: left;
-            text-align: center;
-            font-weight: bold;
-            transition: all 0.2s ease;
-        }
-
-        .tab_item:hover {
-            opacity: 0.75;
-        }
-
-        /*ラジオボタンを全て消す*/
-        input[name="tab_item"] {
-            display: none;
-        }
-
-        /*タブ切り替えの中身のスタイル*/
-        .tab_content {
-            display: none;
-            padding: 40px 40px 0;
-            clear: both;
-            overflow: hidden;
-            height: 100px;
-        }
-
-
-        /*選択されているタブのコンテンツのみを表示*/
-        #all:checked~#all_content,
-        #programming:checked~#programming_content,
-        #design:checked~#design_content {
-            display: block;
-        }
-
-        /*選択されているタブのスタイルを変える*/
-        .tabs input:checked+.tab_item {
-            background-color: darkorange;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body class="bg-dodger-blue-500 text-white">
-    <div style="border-bottom: 2px solid white;">
+    <header style="color: dodgerblue;">
+        <div class="max-w-screen-lg mx-auto">
+            <div class="flex justify-between items-center p-4">
+                <div class="flex items-center">
+                    <img src="image/logo.svg" alt="デリシャスプレミアムアプリのロゴ" class="mr-2" style="width: 40px;">
+                    <span class="text-xl font-bold">デリシャスプレミアムアプリ</span>
+                </div>
+                <div>
+                    <a href="ダウンロードリンク" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+                        アプリをダウンロード
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div style="background-color: dodgerblue; color: white;">
         <div class="max-w-screen-lg mx-auto pt-12">
             <div class="flex flex-wrap pt-12">
                 <div class="w-4/6 pt-20">
                     <h1 class="text-5xl font-extrabold" style="letter-spacing: 1px;">デリシャスプレミアムアプリ</h1>
-                    <p class="tracking-normal">デリシャスプレミアムの宅配注文</p>
+                    <p class="tracking-normal">地域密着型スーパーマーケット デリシャスプレミアムの宅配注文</p>
                     <div class="flex pt-20 space-x-4">
                         <a href="#" class="block bg-black w-40 flex items-center justify-center">App Storeでダウンロード</a>
                         <a href="#" class="block bg-black w-40 flex items-center justify-center">Google Playでダウンロード</a>
                     </div>
                 </div>
                 <div class="w-2/6 flex-none" style="height: 400px; overflow: hidden;">
-                    <img src="img/iphone.png" alt="デリシャスプレミアムアプリの画像" class="w-full object-cover">
+                    <img src="image/iphone.png" alt="デリシャスプレミアムアプリの画像" class="w-full object-cover">
                 </div>
             </div>
         </div>
     </div>
 
-
     <section style="padding-top: 40px; padding-bottom: 40px; border-bottom: 2px solid white;">
-        <div class="text-center" style="padding-bottom: 4px;">
-            <h2 style="font-size: 20px; font-weight: 900;">デリシャスプレミアムの宅配注文</h2>
+        <div class="text-center" style="padding-bottom: 10px;">
+            <h2 style="font-size: 30px; font-weight: 900; color: dodgerblue;">デリシャスプレミアムの宅配注文</h2>
         </div>
         <div class="tabs">
             <input id="all" type="radio" name="tab_item" checked>
@@ -145,24 +96,35 @@
         </div>
     </section>
 
-    <footer class="mx-auto max-w-[700px]">
-        <div class="clear-both py-10">
-            <div class="flex flex-wrap -mx-2">
-                <div class="px-2 w-full md:w-1/2">
-                    <span>地域密着型スーパーマーケット</span><br>
-                    <span class="text-xl font-bold">デリシャスプレミアム</span><br>
-                    <span>愛知県常滑市セントレア5-10-1</span>
+    <section>
+        <div class="text-center" style="padding-bottom: 10px;">
+            <h2 style="font-size: 30px; font-weight: 900; color: dodgerblue;">アプリ限定のセール実施中</h2>
+            <!-- ここにキャンペーン情報を載せたい -->
+            <!-- REST APIに接続してキャンペーン情報を載せる -->
+        </div>
+    </section>
+
+    <footer style="background-color: dodgerblue;color: white;">
+        <div class="mx-auto max-w-[700px]">
+            <div class="clear-both py-10">
+                <div class="flex flex-wrap -mx-2">
+                    <div class="px-2 w-full md:w-1/2">
+                        <span>地域密着型スーパーマーケット</span><br>
+                        <span class="text-xl font-bold">デリシャスプレミアム</span><br>
+                        <span>愛知県常滑市セントレア5-10-1</span>
+                    </div>
+                    <div class="px-2 w-full md:w-1/2">
+                        <ul class="list-none">
+                            <li><a href="#" class="hover:underline">トップ</a></li>
+                            <li><a href="#" class="hover:underline">アプリの使用方法</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="px-2 w-full md:w-1/2">
-                    <ul class="list-none">
-                        <li><a href="#" class="hover:underline">トップ</a></li>
-                        <li><a href="#" class="hover:underline">アプリの使用方法</a></li>
-                    </ul>
-                </div>
+                <div>(c) Copyright 2023 デリシャスプレミアム</div>
             </div>
-            <div>(c) Copyright 2023 デリシャスプレミアム</div>
         </div>
     </footer>
+
 </body>
 
 </html>
