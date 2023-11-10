@@ -70,14 +70,21 @@ input[name="tab_item"] {
     padding-bottom: 20px;
 }
 
-section {
-    padding-top: 40px;
+.custom-height {
+    height: 400px;
 }
 
-section h2 {
-    font-size: 30px;
-    font-weight: 900;
-    color: dodgerblue;
-    text-align: center;
-    padding-bottom: 10px;
+@media only screen and (max-width: 600px) {
+    .tabs {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .tab_item {
+        line-height: 25px;
+    }
+
+    .custom-height {
+        height: 300px;
+    }
 }
