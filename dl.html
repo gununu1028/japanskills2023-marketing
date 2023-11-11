@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デリシャスプレミアムアプリ</title>
+    <style>
+        .campaign {
+            max-width: 800px;
+            background-color: rgba(30, 143, 255, 0.1);
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        .campaign h3 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .campaign p {
+            padding: 0 20px;
+            padding-bottom: 20px;
+        }
+
+        section {
+            padding-top: 40px;
+        }
+
+        section h2 {
+            color: dodgerblue;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>アプリ限定のセール実施中</h2>
+        <div class="campaign-section"></div>
+    </section>
+
+    <script>
+        async function fetchAndDisplayCampaigns() {
+            response = await fetch('https://skilljapan2023.m5a.jp/api/campaign');
+            campaigns = await response.json();
+            campaignHTML = campaigns.map(campaign =>
+                `<dt>${campaign.title}</dt><dd>${campaign.description}</dd>`
+            ).join('');
+            campaignHTML = `<dl>${campaignHTML}</dl>`;
+            campaignSection = document.querySelector('.campaign-section');
+            campaignSection.innerHTML = campaignHTML;
+        }
+        document.addEventListener('DOMContentLoaded', fetchAndDisplayCampaigns);
+    </script>
+
+</body>
+
+</html>
