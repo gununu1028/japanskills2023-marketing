@@ -38,7 +38,9 @@
 <body>
     <section>
         <h2>アプリ限定のセール実施中</h2>
-        <div class="campaign-section"></div>
+        <div class="campaign-section">
+            <dl class="campaign-dl"></dl>
+        </div>
     </section>
 
     <script>
@@ -48,9 +50,8 @@
             campaignHTML = campaigns.map(campaign =>
                 `<dt>${campaign.title}</dt><dd>${campaign.description}</dd>`
             ).join('');
-            campaignHTML = `<dl>${campaignHTML}</dl>`;
-            campaignSection = document.querySelector('.campaign-section');
-            campaignSection.innerHTML = campaignHTML;
+            campaignDl = document.querySelector('.campaign-dl');
+            campaignDl.innerHTML = campaignHTML;
         }
         document.addEventListener('DOMContentLoaded', fetchAndDisplayCampaigns);
     </script>
