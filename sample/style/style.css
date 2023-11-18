@@ -1,3 +1,10 @@
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
 .tabs {
     margin-top: 50px;
     padding-bottom: 40px;
@@ -74,7 +81,26 @@ input[name="tab_item"] {
     height: 400px;
 }
 
-@media only screen and (max-width: 600px) {
+.top_image_area {
+    display: inline-block;
+}
+
+.top_image {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+}
+
+.first_view_left_area {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 4px;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 500px) {
     .tabs {
         width: 100%;
         box-shadow: none;
@@ -86,5 +112,23 @@ input[name="tab_item"] {
 
     .custom-height {
         height: 300px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .top_image_area {
+        width: 100%;
+    }
+
+    .top_image {
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .footer_orang_button_area {
+        display: none;
     }
 }
