@@ -1,0 +1,90 @@
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin: 0 auto;
+}
+
+.tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid darkorange;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+input[name="tab_item"] {
+    display: none;
+}
+
+.tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+    height: 100px;
+}
+
+
+#all:checked~#all_content,
+#programming:checked~#programming_content,
+#design:checked~#design_content {
+    display: block;
+}
+
+.tabs input:checked+.tab_item {
+    background-color: darkorange;
+    color: #fff;
+}
+
+.campaign {
+    max-width: 800px;
+    background-color: rgba(30, 143, 255, 0.1);
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.campaign h3 {
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.campaign p {
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.custom-height {
+    height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    .tabs {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .tab_item {
+        line-height: 25px;
+    }
+
+    .custom-height {
+        height: 300px;
+    }
+}
