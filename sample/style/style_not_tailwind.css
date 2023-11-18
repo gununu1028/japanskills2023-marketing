@@ -83,7 +83,6 @@ input[name="tab_item"] {
 
 .top_image_area {
     display: inline-block;
-    width: 300px;
 }
 
 .top_image {
@@ -98,9 +97,8 @@ input[name="tab_item"] {
     padding-left: 4px;
     display: inline-block;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
 }
-
 
 @media only screen and (max-width: 500px) {
     .tabs {
@@ -128,5 +126,9 @@ input[name="tab_item"] {
         width: 400px;
         height: 400px;
         overflow: hidden;
+    }
+
+    .footer_orang_button_area {
+        display: none;
     }
 }
